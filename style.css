@@ -301,3 +301,56 @@ h1 {
     padding: 40px;
     color: #999;
 }
+
+/* ========== 新增移动端适配（屏幕宽度 ≤ 600px） ========== */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header-section {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #searchInput {
+        order: -1;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #addBtn, #exportBtn {
+        flex: 1;
+        text-align: center;
+        padding: 12px 5px;
+        white-space: nowrap;
+    }
+
+    .task-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-header,
+    .task-row {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .col-task {
+        max-width: 250px;
+        white-space: normal;
+        word-break: break-word;
+        padding-right: 10px;
+    }
+
+    .status-btn, .delete-btn {
+        white-space: nowrap;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}
