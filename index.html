@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>待办事项</title>
+    <title>薛宇锋的待办事项</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>待办事项</h1>
-        <div class="input-section">
-            <input type="text" id="taskInput" placeholder="输入新任务...">
+        <h1>薛宇锋的待办事项</h1>
+        <div class="header-section">
             <button id="addBtn">添加</button>
+            <input type="text" id="searchInput" placeholder="搜索事项...">
+            <button id="exportBtn">导出</button>
         </div>
-        <ul id="taskList"></ul>
+        <div class="task-table">
+            <div class="table-header">
+                <span class="col-index">序号</span>
+                <span class="col-task">要做的事</span>
+                <span class="col-deadline">截止日期</span>
+                <span class="col-remaining">剩余天数</span>
+                <span class="col-status">状态</span>
+                <span class="col-delete">操作</span>
+            </div>
+            <div id="taskList"></div>
+        </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>添加待办事项</h2>
+            <div class="form-group">
+                <label for="taskInput">要做的事</label>
+                <input type="text" id="taskInput" placeholder="请输入任务内容...">
+            </div>
+            <div class="form-group">
+                <label for="deadlineInput">截止日期</label>
+                <input type="date" id="deadlineInput">
+            </div>
+            <div class="modal-buttons">
+                <button id="cancelBtn">取消</button>
+                <button id="saveBtn">保存</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
